@@ -1,0 +1,8 @@
+click derecho en la carpeta del proyecto>run as>maven build...
+en goals
+spring-boot:build-image -DskipTest
+
+#docker compose
+crear un archivo "docker-compose.yaml", configurarlo (usar configuracion de dos espacios) 
+cd {carpeta donde se encuentra el archivo yaml}
+docker-compose up

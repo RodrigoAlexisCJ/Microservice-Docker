@@ -1,0 +1,76 @@
+#on command windows writte
+#create a container
+docker run {application-name}
+
+#run container in a specific port
+docker run -p {portname(container):portname(docker)} {application-name}
+
+#stop containers with Control+C
+
+#run container in detach mode (background) create and show container id
+docker run -p{portname:portname} -d {application.name} 
+
+#visualize and show container log
+docker logs {container id} 
+
+docker log -f {container id}
+
+#check the list of containers enabled
+docker container ls
+
+#check the list of all the containes enabled
+docker container ls -a
+
+#stop a specific container
+docker container stop {container id}
+
+#check the containes image (docker daemon)
+docker images
+
+#changes containers tag name 
+docker tag {last tag} {new tag}
+
+#show the history of a container
+docker image history
+
+#inspect containers image
+docker image inspect {container id}
+
+#pause a container 
+docker container pause {container id}
+
+#unpause a container 
+docker container unpause {container id}
+
+#inspect container
+docker container inspect {container id}
+
+#remove the stop containers
+docker container prune
+
+#stop grecefully a container
+docker container stop {container id}
+
+#instant stop container 
+docker container kill {container id}
+
+#restart a container always when docker restart
+docker run -p{portname:portname} --restart=always -d {application.name} 
+
+#to know what kind of containers events has been invoked (whats happening in your background)
+docker events
+
+#to know what event is running in the top
+docker top
+
+#show all the stats of the containers event 
+docker stats
+
+#change the memorie and cpu quotas in a process
+docker run -p{portname:portname} -m {memory space}m --cpu-quota{porcent between 0-100000 (0-100%)} -d {application.name}
+
+#show all the details on system
+docker system df
+
+#open zipkin (open docker desktop before open zipkin)
+docker run -p 9411:9411 openzipkin/zipkin:2.23
